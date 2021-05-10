@@ -4,7 +4,6 @@
 Refactor the existing solution to increase the speed of execution and handle large datasets in a reasonable time. Assess whether the refactored code is significantly faster.
 
 ## Results
-Using images and examples of your code, ***compare the stock performance between 2017 and 2018***, as well as the execution times of the original script and the refactored script.
 
 ### Year over Year Stock Performance
 
@@ -12,7 +11,9 @@ The charts below show annual return by stock for 2017 and 2018. The only evident
 
 ![Return over time by stock](Resources/Return_over_time_by_stock.PNG) ![Chart of return over time by stock](Resources/chart_return_over_time_by_stock.PNG)
 
-Looking at the daily closing prices by stock over 2017 and 2018 shows most of the stocks varied little over this period, generally trnding neither up nor down. This suggests the market as a whole generated little return over the course of the 2 years.Two notable exceptions are the stocks SEDG and DQ which show a significant run up in price and then a decline. SEDG does close 2018 showing a significant increase in stock price, while DQ closes 2018 approximately where it began in 2017.
+Looking at the daily closing prices by stock over 2017 and 2018 shows most of the stocks varied little over this period, generally trending neither up nor down. This suggests the portfolio as a whole generated little return over the course of the 2 years. Two notable exceptions are the stocks SEDG and DQ which show a significant run up in price and then a decline. SEDG does close 2018 showing a significant increase in stock price, while DQ closes 2018 approximately where it began in 2017.
+
+Steve should look at whether the market as a whole, or particular indices/segments of the market performed better than this portfolio.
 
 ![Daily closing priced by stock](Resources/chart_daily_closing_prices_by_stock.PNG)
 
@@ -25,7 +26,7 @@ The chart below shows the progress in refactoring the script to reduce run time 
 
 #### The original algorithm
 
-VBA module ChallengeStart contains the starting code with some comments explaining the logic. Pseudocode would look like:
+The original algorithm an be described in pseudocode:
     1) Get user input - year
         start timer
     2) Set up output worksheet
@@ -54,6 +55,8 @@ VBA module ChallengeStart contains the starting code with some comments explaini
     End timer
     output runtime to screen
                      
+(VBA module ChallengeStart contains the original code with some comments explaining the logic.)
+
 This script does 13 passes through all rows of data. It also activates worksheets 16 times. 
 
 The run times are 4.605 seconds for 2017 and 4.852 for 2018, as shown in the screenshots below. 
@@ -77,7 +80,7 @@ All of the code formatting the Results worksheet can be combined with the code w
 
 Original Output Code:
 
-![Original for loop](Resources/original_output_code.PNG)
+![Original for loop](Resources/original-output-code.PNG)
 
 Refactored Output Code:
 
@@ -101,7 +104,7 @@ The refactored code run times are displayed in the following screenshots. There 
 
 ## Summary
 
-Generally, refactoring code can be done to improve efficiency, readability and maintenance. Efficiency in the use of memory and speed lessen the pressure to upgrade and/or add hardware. Improvement in readability makes it easier for subsequent programmers to pick up and modify or enhance code. This is particularly important when there is turnover in staff, or as is currently happening, a large percentage of pgogrammers who built legacy systems are retiring, taking with them valuable knowledge and expertise. 
+Generally, refactoring code can be done to improve efficiency, readability and maintenance. Efficiency in the use of memory and speed lessen the pressure to upgrade and/or add hardware. Improvement in readability makes it easier for subsequent programmers to pick up and modify or enhance code. This is particularly important when there is turnover in staff, or as is currently happening, a large percentage of programmers who built legacy systems are retiring, taking with them valuable knowledge and expertise. 
 
 One disadvantage I see is the temptation to improve efficiency at the expense of flexibility. Flexibility in the code makes it easier to accommodate changes in the input and to reuse code for other projects. A highly optimized algorithm may be based on assumptions about the input data. Changes to the input can result in the need to rework the code.
 

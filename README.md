@@ -1,4 +1,4 @@
-# VBA Challenge
+# Refactoring VBA Code
 ## Overview of Project
 
 Refactor the existing solution to increase the speed of execution and handle large datasets in a reasonable time. Assess whether the refactored code is significantly faster.
